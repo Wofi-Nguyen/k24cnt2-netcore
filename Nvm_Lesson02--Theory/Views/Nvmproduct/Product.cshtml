@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "Thông tin sản phẩm";
+	NvmProduct product = ViewData["dataproduct"] as Nvm_Lesson02__Theory.Models.NvmProduct;
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="alert alert-danger">
+	<h2>Dữ liệu sản phầm</h2>
+	<p>ID: @product.ProductId</p><br />
+	<p>Name: @product.ProductName</p><br />
+	<p>Date: @product.YearRelease</p><br />
+	<p>Price: @product.ProductGia</p><br /> 
+</div>
+
+<div class="alert alert-danger">
+	<h2>Dữ liệu sản phầm</h2>
+	<p>ID: @ViewBag.product.ProductId</p><br />
+	<p>Name: @ViewBag.product.ProductName</p><br />
+	<p>Date: @ViewBag.product.YearRelease</p><br />
+	<p>Price: @ViewBag.product.ProductGia</p><br />
+</div>
