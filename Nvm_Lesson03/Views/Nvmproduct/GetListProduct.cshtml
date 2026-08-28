@@ -1,0 +1,47 @@
+﻿@model List<Nvm_Lesson03.Models.Nvmproducts>
+@{
+	int stt = 0;
+}
+<div class="header">
+	<h1>Hiển thị sản phẩm</h1>
+</div>
+
+<div class="card-body">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Date</th>
+				<th>Price</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			@if (Model != null)
+			{
+				foreach (var item in Model)
+				{
+					stt++;
+					<tr>
+						<td>@stt</td>
+						<td>@item.PId</td>
+						<td>@item.PName</td>
+						<td>@item.PDate</td>
+						<td>@item.PPrice</td>
+						<td>
+							<a href="#">Xem</a>
+							<a href="#">Sửa</a>
+							<a href="#">Xoá</a>
+						</td>
+					</tr>
+				}
+			}
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="6">Tổng số sản phẩm: @Model.Count</th>
+			</tr>
+		</tfoot>
+	</table>
+</div>
