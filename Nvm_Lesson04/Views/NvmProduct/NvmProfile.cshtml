@@ -1,0 +1,35 @@
+﻿@using Nvm_Lesson04.Models;
+@{
+	ViewData["Title"] = "Profile";
+	var profile = ViewBag.NvmProfile as NvmAccount;
+}
+<div class="row">
+	<div class="col-md-4">
+		<img src="@profile.Avatar" alt="@profile.Name"/>
+	</div>
+	<div class="col-md-8">
+		<div class="card">
+			<h3>Name: @profile.Name</h3>
+			<P>Email: @profile.Email</P>
+			<P>Address: @profile.Address</P>
+			<P>Phone: @profile.Phone</P>
+			<P>Bio: @profile.Bio</P>
+			<P>Gender: 
+				@if (profile.Gender == 1)
+				{
+					<text>Nam</text>
+				}
+				else
+				{
+					<text>Nữ</text>
+				}
+			</P>
+			<p>Date: @profile.Date</p>
+			<p>
+				<a asp-controller="NvmProduct" asp-action="NvmIndex" class="btn btn-danger">
+					Back to list
+				</a>
+			</p>
+		</div>
+	</div>
+</div>

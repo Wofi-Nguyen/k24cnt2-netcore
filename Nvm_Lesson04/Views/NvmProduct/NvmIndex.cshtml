@@ -1,0 +1,27 @@
+﻿@{
+	ViewData["Title"] = "Danh sách tài khoản";
+	var nvmAccounts = ViewBag.NvmAccount;
+}
+
+<div class="row">
+	@if (ViewBag.NvmAccount != null)
+	{
+		foreach (var item in nvmAccounts)
+		{
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="img-fluid">
+							<img src="@item.Avatar" alt="general" />
+						</div>
+						<div class="">
+							<h3>@item.Name</h3>
+							<p>@item.Bio</p>
+							<a asp-route="NvmProfile" asp-route-id="@item.Id" class="btn btn-success btn-block">Profile</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	}
+</div>
