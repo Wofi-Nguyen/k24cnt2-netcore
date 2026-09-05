@@ -1,0 +1,55 @@
+﻿@{
+	ViewData["Title"] = "Razor view";
+	int total = 7500;
+	var mymess = "Alo alo";
+}
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+<p>@mymess</p>
+<p>Your money: @total</p>
+
+<hr />
+<h2>Cấu trúc If Else</h2>
+@if (total > 5000)
+{
+	<p>Giàu rồi</p>
+}
+else
+{
+	<p>Thôi làm đi sẽ giàu</p>
+}
+
+@{
+	if (total > 5000)
+	{
+		<p>Giàu ghê chưa</p>			
+	}
+	else
+	{
+		<p>Không làm cạp đất mà ăn</p>
+	}
+}
+
+<hr />
+<h2>Cấu trúc lặp</h2>
+@{
+	for(int i = 0; i < 10; i++)
+	{
+		if (i % 2 > 0)
+		{
+			<span class="btn btn-danger">@i</span>
+		}
+		else
+		{
+			<span class="btn btn-success">@i</span>
+		}
+	}
+	string[] image = {"1 (1).png", "1 (2).png"};
+}
+
+<hr />
+@foreach (var item in image)
+{
+	<img src="~/image/@item" width="100" height="auto"/>
+}
