@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Nvm_Lesson07.Models.DataModels.Member>;
+@{
+	ViewData["Title"] = "Danh sách member";
+	int num = 0;
+}
+<div class="list list-group">
+	<h1>@ViewData["Title"]</h1>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<th>Ordinal number: </th>
+			<th>Id: </th>
+			<th>Name: </th>
+			<th>Fullname: </th>
+			<th>Password: </th>
+		</thead>
+		<tbody>
+			@if (Model != null)
+			{
+				@foreach (var item in Model)
+				{
+					num++;
+					<tr>
+						<td>@num</td>
+						<td>@item.id</td>
+						<td>@item.name</td>
+						<td>@item.fullname</td>
+						<td>@item.password</td>
+					</tr>
+				}
+			}
+		</tbody>
+	</table>
+</div>

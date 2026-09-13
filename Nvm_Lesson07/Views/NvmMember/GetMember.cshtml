@@ -1,0 +1,12 @@
+﻿@{
+	ViewData["Title"] = "Thông tin member";
+	var member = Model as Nvm_Lesson07.Models.DataModels.Member;
+}
+
+<div class="alert alert-info">
+	<h1>@ViewData["Title"]</h1>
+	<p>Id: @Model.id</p>
+	<p>Name: @Model.name</p>
+	<p>Fullname: @Model.fullname</p>
+	<p>Password: @Model.password</p>
+</div>
