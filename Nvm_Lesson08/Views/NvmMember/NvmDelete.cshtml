@@ -1,0 +1,40 @@
+﻿@model Nvm_Lesson08.Models.NvmMember
+
+@{
+    ViewData["Title"] = "NvmDelete";
+}
+
+<h1>NvmDelete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NvmMember</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmMemberId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmMemberId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmUserName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmUserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmPassword)
+        </dd>
+    </dl>
+    
+    <form asp-action="NvmDeleted">
+        <input name="id" value="@Model.NvmMemberId" type="hidden" />
+
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

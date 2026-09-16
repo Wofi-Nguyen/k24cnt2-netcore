@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Nvm_Lesson08.Models.NvmMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<div class="card p-3">
+    <div class="card-header">
+        <h1>@ViewData["Title"]</h1> 
+        <a asp-action="NvmCreate">Thêm  mới</a>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NvmMemberId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NvmUserName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NvmPassword)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NvmMemberId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NvmUserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NvmPassword)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sửa", "NvmEdit", new {  id=item.NvmMemberId }) |
+                        @Html.ActionLink("Xem chi tiết", "NvmDetails", new { id = item.NvmMemberId }) |
+                            @Html.ActionLink("Xóa", "NvmDelete", new { id = item.NvmMemberId })
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

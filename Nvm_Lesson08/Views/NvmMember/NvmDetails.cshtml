@@ -1,0 +1,36 @@
+﻿@model Nvm_Lesson08.Models.NvmMember
+
+@{
+    ViewData["Title"] = "Thông tin chi tiết thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>NvmMember</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmMemberId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmMemberId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmUserName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmUserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmPassword)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Sửa", "NvmEdit", new { id = Model.NvmMemberId }) |
+    <a asp-action="Index">Back to List</a>
+</div>
