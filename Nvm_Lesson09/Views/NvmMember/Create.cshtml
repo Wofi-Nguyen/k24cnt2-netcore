@@ -1,0 +1,41 @@
+﻿@model Nvm_Lesson09.Models.DataViewModels.NvmMemberRegister
+
+@{
+    ViewData["Title"] = "Thêm mới thành viên";
+}
+
+<div class="container my-4">
+    <h2>@ViewData["Title"]</h2>
+    <h4>Thông tin NvmMember</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="MemName" class="form-label">Name</label>
+                    <input asp-for="MemName" class="form-control" />
+                    <span asp-validation-for="MemName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MemId" class="form-label">Id</label>
+                    <input asp-for="MemId" class="form-control" />
+                    <span asp-validation-for="MemId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MemClass" class="form-label">Class</label>
+                    <input asp-for="MemClass" class="form-control" />
+                    <span asp-validation-for="MemClass" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <input type="submit" value="Tạo mới" class="btn btn-primary" />
+                    <a asp-action="NvmIndex" class="btn btn-secondary ms-2">Quay lại danh sách</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

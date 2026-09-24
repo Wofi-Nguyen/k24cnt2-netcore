@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Nvm_Lesson09.Models.DataModels.NvmMember>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemClass)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemClass)
+                </td>
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-id="@item.MemId">
+                        Edit
+                    </a> |
+
+                    <a asp-action="Details"
+                       asp-route-id="@item.MemId">
+                        Details
+                    </a> |
+
+                    <a asp-action="Delete"
+                       asp-route-id="@item.MemId">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
