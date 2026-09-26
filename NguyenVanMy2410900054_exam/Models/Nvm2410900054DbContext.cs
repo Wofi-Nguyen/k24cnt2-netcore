@@ -27,11 +27,8 @@ public partial class Nvm2410900054DbContext : DbContext
     {
         modelBuilder.Entity<NvmEployee>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("NvmEployee");
+            entity.ToTable("NvmEployee");
 
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.NvmEmail)
                 .HasMaxLength(100)
                 .IsFixedLength();
@@ -45,9 +42,7 @@ public partial class Nvm2410900054DbContext : DbContext
 
         modelBuilder.Entity<NvmStudent>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("NvmStudent");
+            entity.ToTable("NvmStudent");
 
             entity.Property(e => e.NvmEmail)
                 .HasMaxLength(100)

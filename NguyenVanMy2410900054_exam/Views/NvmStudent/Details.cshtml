@@ -17,18 +17,18 @@
             @Html.DisplayFor(model => model.NvmName)
         </dd>
     </dl>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NvmGender)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NvmGender)
+        <dd class="col-sm-10">
+            @(Model.NvmGender == true ? "Nam" : "Nữ")
         </dd>
     </dl>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NvmBirthday)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NvmBirthday)
+        <dd class="col-sm-10">
+            @(Model.NvmBirthday.HasValue ? Model.NvmBirthday.Value.ToString("dd/MM/yyyy") : "")
         </dd>
     </dl>
         <dt class = "col-sm-2">
@@ -45,11 +45,11 @@
             @Html.DisplayFor(model => model.NvmPhone)
         </dd>
     </dl>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.NvmActive)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NvmActive)
+        <dd class="col-sm-10">
+            @(Model.NvmActive == true ? "Kích hoạt" : "Vô hiệu hóa")
         </dd>
     </dl>
 </div>

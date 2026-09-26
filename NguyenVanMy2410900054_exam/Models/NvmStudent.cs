@@ -5,7 +5,7 @@ namespace NguyenVanMy2410900054_exam.Models;
 
 public partial class NvmStudent
 {
-    public long? Id { get; set; }
+    public long Id { get; set; }
 
     public string? NvmName { get; set; }
 

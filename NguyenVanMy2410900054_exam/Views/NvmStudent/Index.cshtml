@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Danh sách sinh viên</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -40,10 +40,10 @@
                 @Html.DisplayFor(model => item.NvmName)
             </td>
             <td>
-                @Html.DisplayFor(model => item.NvmGender)
+                @(item.NvmGender == true ? "Nam" : "Nữ")
             </td>
             <td>
-                @Html.DisplayFor(model => item.NvmBirthday)
+                @(item.NvmBirthday.HasValue ? item.NvmBirthday.Value.ToString("dd/MM/yyyy") : "")
             </td>
             <td>
                 @Html.DisplayFor(model => item.NvmEmail)
@@ -52,7 +52,7 @@
                 @Html.DisplayFor(model => item.NvmPhone)
             </td>
             <td>
-                @Html.DisplayFor(model => item.NvmActive)
+                @(item.NvmActive == true ? "Kích hoạt" : "Vô hiệu hóa")
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
