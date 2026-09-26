@@ -1,0 +1,59 @@
+@model NguyenVanMy2410900054_exam.Models.NvmStudent
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NvmStudent</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmName)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmGender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmGender)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmBirthday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmBirthday)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmEmail)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmPhone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmPhone)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvmActive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvmActive)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
