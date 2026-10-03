@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/_NvmProduct.css"/>
+</head>
+<body>
+    <header class="container border my-1 border-radius">
+        <div>
+            <a asp-controller="NvmProduct" asp-action="Index">Danh sách sản phẩm</a>
+            <a asp-controller="NvmProduct" asp-action="Search">Tìm kiếm sản phẩm</a>
+            <a asp-controller="NvmProduct" asp-action="Hots">Sản phẩm hot</a>
+            <a asp-controller="NvmProduct" asp-action="About">Giới thiệu</a>
+        </div>
+    </header>
+    <div class="container border my-1" style="min-height:250px; weight: auto;">
+        @RenderBody()
+    </div>
+    <footer class="container border my-1">
+        <p>
+            Copyright by MỹNguyễn - <a asp-controller="NvmProduct" asp-action="About">Giới thiệu</a>
+        </p>
+    </footer>
+	<script src="~/js/NvmLayoutHome.js" asp-append-version="true"></script>
+	<script src="~/lib/jquery/Nvmjquery.js" asp-append-version="true"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    -moz-box-align: inherit;
+    -webkit-box-sizing: inherit;
+}
+
+header{
+    background-color: #333;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div a{
+    flex: auto;
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 16pt;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
